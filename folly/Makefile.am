@@ -518,7 +518,17 @@ if HAVE_LINUX
 nobase_follyinclude_HEADERS += \
 	experimental/io/HugePages.h
 libfolly_la_SOURCES += \
-	experimental/io/HugePages.cpp
+	experimental/io/HugePages.cpp\
+	experimental/symbolizer/Dwarf.cpp \
+	experimental/symbolizer/ElfCache.cpp \
+	experimental/symbolizer/Elf.cpp \
+	experimental/symbolizer/ElfUtil.cpp \
+	experimental/symbolizer/LineReader.cpp \
+	experimental/symbolizer/SignalHandler.cpp \
+	experimental/symbolizer/StackTrace.cpp \
+	experimental/symbolizer/Symbolizer.cpp
+
+	
 endif
 
 if !HAVE_WEAK_SYMBOLS
